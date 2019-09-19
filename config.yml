@@ -1,0 +1,38 @@
+logging:
+  level: INFO
+
+  appenders:
+  - type: console
+    threshold: ALL
+    timeZone: IST
+
+#server:
+#  type: simple
+#  applicationContextPath: /
+#  adminContextPath: /admin
+#  connector:
+#    port: 8080
+#    type: http
+#messageQueue:
+#  mongoHost: localhost
+#  mongoPort: 27017
+#  mongoDB: Dropwizard
+#  collectionName: employee
+
+
+#
+#mongoserver:
+#uri: mongodb://localhost:27017/student-data
+
+server:
+  maxThreads: 512
+  applicationContextPath: /
+  applicationConnectors:
+  - type: http
+    port: 8080
+  adminConnectors:
+  - type: http
+    port: 8081
+
+mongoserver:
+  uri: mongodb://localhost:27017/employees
