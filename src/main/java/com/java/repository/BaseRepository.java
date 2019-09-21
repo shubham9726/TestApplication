@@ -12,3 +12,4 @@ public interface BaseRepository<T extends BaseModel> extends GenericRepository<T
     void deleteById(String Id);
     T updateById(String Id, T model);
 }
+

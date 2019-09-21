@@ -17,20 +17,12 @@ import java.util.List;
 @Timed
 public class EmployeeResource  {
 
-
   EmployeeService employeeService;
 
   @Inject
   public EmployeeResource(EmployeeService employeeService) {
     this.employeeService = employeeService;
   }
-
- /* @PostConstruct
-
-  @Override
-  protected void configure() {
-  }
-*/
 
   @POST
   @Timed

@@ -1,25 +1,24 @@
 package com.java.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.java.api.BaseModel;
 
-import java.util.Objects;
-
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Employee extends BaseModel {
 
   private String name;
   private String address;
   private String employeeId;
-/*
   public Employee() {
   }
    public Employee(String name,String address, String employeeId){
     this.name = name;
     this.address = address;
     this.employeeId = employeeId;
-   }*/
+   }
 
 
-  @Override
+  /*@Override
   public boolean equals(final Object o) {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
@@ -32,7 +31,7 @@ public class Employee extends BaseModel {
   @Override
   public int hashCode() {
     return Objects.hash(name, address, employeeId);
-  }
+  }*/
 
   public String getName() {
     return name;
@@ -62,12 +61,12 @@ public class Employee extends BaseModel {
   public Object getOrDefault(Object key, Object defaultValue) {
     return null;
   }*/
-  @Override
+ /* @Override
   public String toString() {
     return "Employee{"
             + "name=" + name
             + ", address=" + address
             + ", employeeId='" + employeeId + '\''
             + '}';
-  }
+  }*/
 }

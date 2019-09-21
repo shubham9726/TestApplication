@@ -1,12 +1,14 @@
 package com.java.service.impl;
 
 import com.google.inject.Inject;
+import com.google.inject.Singleton;
 import com.java.domain.Employee;
 import com.java.repository.EmployeeRepository;
 import com.java.service.EmployeeService;
 
 import java.util.List;
 
+@Singleton
 public class EmployeeServiceImpl implements EmployeeService {
 
   EmployeeRepository employeeRepository;
