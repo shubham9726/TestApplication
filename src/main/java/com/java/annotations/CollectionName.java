@@ -1,3 +1,4 @@
+/*
 package com.java.annotations;
 
 import java.lang.annotation.ElementType;
@@ -16,3 +17,4 @@ public @interface CollectionName {
     boolean premSyncDown() default  true;
     boolean premSyncUp() default true;
 }
+*/

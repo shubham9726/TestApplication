@@ -1,4 +1,4 @@
-package com.java;
+/*package com.java;
 
 import org.glassfish.jersey.server.ResourceConfig;
 
@@ -7,7 +7,7 @@ public class hellodropwizardConfiguration extends ResourceConfig {
   public hellodropwizardConfiguration(){
     packages("com.java");
     register(new ApplicationConnector());
-  }
+  }*/
 
   /*@JsonProperty
   @NotEmpty
@@ -57,4 +57,4 @@ public class hellodropwizardConfiguration extends ResourceConfig {
   public void setCollectionName(String collectionName) {
     this.collectionName = collectionName;
   }*/
-}
+/*}*/

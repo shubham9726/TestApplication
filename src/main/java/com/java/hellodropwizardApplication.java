@@ -2,6 +2,8 @@ package com.java;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.google.inject.AbstractModule;
+import com.hubspot.dropwizard.guice.GuiceBundle;
+
 import com.google.inject.Module;
 import com.java.configuration.AppConfiguration;
 import com.java.configuration.ResourceConfiguration;
@@ -18,7 +20,7 @@ import io.dropwizard.setup.Environment;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.reflections.Reflections;
 import org.reflections.util.ConfigurationBuilder;
-import ru.vyarus.dropwizard.guice.GuiceBundle;
+/*import ru.vyarus.dropwizard.guice.GuiceBundle;*/
 import org.glassfish.jersey.media.multipart.MultiPartFeature;
 import ru.vyarus.dropwizard.guice.module.installer.feature.LifeCycleInstaller;
 import ru.vyarus.dropwizard.guice.module.installer.feature.ManagedInstaller;
@@ -48,35 +50,13 @@ public class hellodropwizardApplication extends Application<AppConfiguration> {
     return "hellodropwizard";
   }
 
-  /*@Override
-  public void run(AppConfiguration appConfiguration, Environment environment) throws Exception {
-    environment.jersey().packages("service");
-  }*/
-
   public void initialize(final Bootstrap<AppConfiguration> bootstrap) {
-  /*bootstrap.getObjectMapper().enable(DeserializationFeature.READ_ENUMS_USING_TO_STRING);
-    bootstrap.addBundle(GuiceBundle.<AppConfiguration>builder()
-      .enableAutoConfig("com.java")
-      .build()
-    );*/
-
-    bootstrap.getObjectMapper().registerSubtypes(DefaultServerFactory.class);
-    /*bootstrap.getObjectMapper().enable(DeserializationFeature.READ_ENUMS_USING_TO_STRING);
-    bootstrap.addBundle(jaxwsBundle);
-    Module[] modules = autoDiscoverModules();
-    GuiceBundle.Builder builder = GuiceBundle.builder()
-//               .modules(new ApplicationConnector())
-      .modules(modules)
-       .noDefaultInstallers()
-      .installers(new Class[]{LifeCycleInstaller.class,
-        ManagedInstaller.class,
-        JerseyFeatureInstaller.class, ResourceInstaller.class,
-        JerseyProviderInstaller.class,
-        EagerSingletonInstaller.class,
-        HealthCheckInstaller.class,
-        TaskInstaller.class,
-        PluginInstaller.class
-      })*/
+    guiceBundle = GuiceBundle.<AppConfiguration>newBuilder()
+            .addModule(new MongoModule())
+            .enableAutoConfig("com.washingtonpost")
+            .setConfigClass(AppConfiguration.class)
+            .build();
+   /*bootstrap.getObjectMapper().registerSubtypes(DefaultServerFactory.class);
     bootstrap.getObjectMapper().enable(DeserializationFeature.READ_ENUMS_USING_TO_STRING);
     bootstrap.addBundle(jaxwsBundle);
     Module[] modules = autoDiscoverModules();
@@ -98,7 +78,7 @@ public class hellodropwizardApplication extends Application<AppConfiguration> {
       .enableAutoConfig(ApplicationConnector.class.getPackage().getName());
     postInitialize(bootstrap, builder);
     guiceBundle = builder.build();
-    bootstrap.addBundle(guiceBundle);
+    bootstrap.addBundle(guiceBundle);*/
   }
 
   @Override

@@ -1,3 +1,4 @@
+/*
 package com.java;
 
 import com.google.inject.AbstractModule;
@@ -29,3 +30,4 @@ public class ApplicationConnector extends AbstractModule {
     return mongoManager;
   }
 }
+*/

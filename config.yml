@@ -33,6 +33,10 @@ server:
   adminConnectors:
   - type: http
     port: 8081
+mongoDB:
+  hosts: ${MONGO_HOSTS}
+  dbName: ${MONGO_DBNAME}
+  options: ${MONGO_OPTIONS}
 
-mongoserver:
-  uri: mongodb://localhost:27017/employees
+#mongoserver:
+#  uri: mongodb://localhost:27017/employees

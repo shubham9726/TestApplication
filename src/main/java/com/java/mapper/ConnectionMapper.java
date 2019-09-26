@@ -1,3 +1,4 @@
+/*
 package com.java.mapper;
 
 import javax.validation.ConstraintViolation;
@@ -23,6 +24,7 @@ public class ConnectionMapper  implements ExceptionMapper<ConstraintViolationExc
       String msg = v.getMessage();
       Path path = v.getPropertyPath();
       String lastNode = "";
+      nnnnnnnnnnnnnnn
       Iterator<Path.Node> nodes = path.iterator();
       while (nodes.hasNext()) {
         Path.Node node = nodes.next();
@@ -39,3 +41,4 @@ public class ConnectionMapper  implements ExceptionMapper<ConstraintViolationExc
     return Response.status(Response.Status.BAD_REQUEST).build();
   }
 }
+*/

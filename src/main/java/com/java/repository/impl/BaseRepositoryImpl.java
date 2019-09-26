@@ -1,3 +1,4 @@
+/*
 package com.java.repository.impl;
 
 import com.google.common.collect.Lists;
@@ -72,3 +73,4 @@ public class BaseRepositoryImpl<T extends BaseModel> implements BaseRepository<T
     return model;
   }
 }
+*/

@@ -1,8 +1,10 @@
+/*
 package com.java.health;
 
 import com.codahale.metrics.health.HealthCheck;
-
+nnnnnn
 public class TemplateHealthCheck extends HealthCheck {
+*/
 
   /*private MongoClient mongoClient;
 
@@ -21,12 +23,12 @@ public class TemplateHealthCheck extends HealthCheck {
     }
     return Result.unhealthy("DropwizardMongoDB Service is down");
   }*/
-  private final String template;
+ /* private final String template;
 
   public TemplateHealthCheck(String template) {
     this.template = template;
   }
-
+  nnnnnnnnnnnnn
   @Override
   protected Result check() throws Exception {
 
@@ -36,4 +38,4 @@ public class TemplateHealthCheck extends HealthCheck {
     }
     return Result.healthy();
   }
-}
+}*/

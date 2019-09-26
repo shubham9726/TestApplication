@@ -1,3 +1,4 @@
+/*
 package com.java.mapper;
 
 import com.fasterxml.jackson.databind.MapperFeature;
@@ -83,3 +84,6 @@ public class MongoManager implements MongoDb, Managed {
     }
   }
 }
+
+nnnnnnnnnnnnnnnnnnnn
+*/
